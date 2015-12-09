@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>esp8266</title>
+        <meta charset='utf-8' />
+        <meta name="author" content="Mason" />
+        <meta name="description" content="esp8266 stuff" />
+        <link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="header">
+			<h1>experiments with the esp8266</h1>
+		</header>
+		<div class="actualstuff">
+			<div class="main-wrap">
+				<aside class="nav" id="navigation">
+					<ul>
+						<li><a class="nav-a" href="index.html">Home</a></li>
+						<li><a class="nav-a" href="hardware.html#anim">Hardware Setup</a></li>
+						<li><a class="nav-a" href="software.html#anim">Software Setup</a></li>
+						<li><a class="nav-a" href="test.html#anim">Test it out!</a></li>
+						<li><a class="nav-a" href="about.html#anim">About Mason</a></li>
+					</ul>
+				</aside>
+				<section class="main" id="content">
+					<h2>Hardware</h2>
+					<p>I soldered some wires to my esp8266. It's not the prettiest, but it works. It's probably easier to use a breakout board, or something like that.</p>
+					<p>[photo here]</p>
+					<p>Then, I plugged everything into a breadboard. The end result is a mess of wires like the one shown in the photo.</p>
+					<p>[photo here]</p>
+					<p>When plugging things into the arudino, keep in mind that <strong>the esp8266 uses 3.3V, but the arduino uses 5V</strong>. This means that you should plug in the power for the esp8266 into a 3.3V power supply. While you can use the one built into the arduino (like I did), it's not a very good idea as the esp8266 can pull A LOT of current sometimes. Also, the RX and TX pins will be 5V as well. This means you'll have to have a voltage divider on the [RX or TX] pins. Here's a schematic for it:</p>
+					<p>[photo here]</p>
+					<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in egestas purus. Vivamus at commodo mauris, sit amet vulputate risus. Suspendisse potenti. Sed quis turpis at ex volutpat posuere vel vitae dolor. Phasellus dapibus mattis sem eget ultricies. Sed fermentum dui nec justo feugiat, et ornare metus ullamcorper. Nulla pulvinar ullamcorper interdum. Nullam ac urna nec arcu pretium suscipit. Etiam sodales odio at odio hendrerit imperdiet ac ac mi.
+</p><p>
+Integer in porttitor nunc. Mauris diam dolor, tristique eget neque vel, pharetra tristique enim. Mauris eget lectus eu metus pulvinar finibus. Ut nec consectetur sapien. Nulla mollis id dolor sed ultricies. Aliquam erat volutpat. Nulla facilisi. Fusce blandit egestas ligula, id interdum tortor commodo ac. Vestibulum id orci nec tortor semper commodo.
+</p><p>
+Phasellus at malesuada eros. Pellentesque sit amet massa tincidunt, faucibus eros quis, euismod orci. Curabitur pharetra massa vel orci pretium, vitae vehicula lectus pellentesque. Duis pharetra arcu vitae fringilla porttitor. Etiam facilisis tellus lectus, ut porta erat aliquet quis. Integer sit amet orci eu elit semper auctor id ut nibh. Pellentesque ultrices blandit erat sit amet venenatis. Etiam venenatis, lorem sed elementum rutrum, est arcu euismod ex, quis malesuada diam quam sit amet felis. Praesent suscipit condimentum egestas. In sed tristique eros. Aliquam consequat enim purus, vel rutrum urna ornare quis. Suspendisse vulputate dui in rhoncus ullamcorper. In iaculis erat et fermentum tincidunt.
+</p>
+				</section>
+			</div>
+			<footer class="footer">
+				<div>Made by <a class="credit" href="https://masonx.ca/">Mason</a></div>
+			</footer>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="navbar.js"></script>
+	</body>
+</html>

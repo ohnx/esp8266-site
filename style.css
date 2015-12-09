@@ -1,0 +1,14 @@
+html { background-color: dodgerblue; }
+body { display: block; width: 100%; max-width: 710px; margin: 1em auto 1.5em auto; color black; font-family: sans-serif; }
+.header { position: fixed !important; z-index: 1; width: 100%; max-width: 710px; background: url('http://www.seeedstudio.com/depot/images/product/WiFi%20Serial%20Transceiver%20Module.jpg'); }
+.header > h1 { margin: 0; display: inline-block; margin: 520px 0 5px 5px; }
+.actualstuff { position: absolute; top: 575px; width: 100%; max-width: 710px; z-index: 2; border-top: 3px solid FireBrick; }
+.main-wrap { padding: 5px; width: calc(100% - 10px); background-color: #fff; display: inline-block; }
+.nav { display: inline-block; width: 145px; position: fixed; }
+.nav > ul { list-style-type: none; margin: 0; padding: 0; }
+.nav-a { color: NavajoWhite; transition: 0.1s linear all; text-decoration: none; padding: 10px 10px 10px 10px; display: block; background-color: oliveDrab; margin: 0; }
+.nav-a:hover { background-color: rebeccapurple; color: white; }
+h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+.main { display: inline-block; width: 550px; float: right; }
+.footer { background-color: darkblue; color: papayawhip; padding: 3px; text-align: center; clear: both; }
+.credit { text-decoration: none; color: white; }
