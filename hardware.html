@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <title>esp8266</title>
+        <title>esp8266 - hardware</title>
         <meta charset='utf-8' />
         <meta name="author" content="Mason" />
         <meta name="description" content="esp8266 stuff" />
+        <!-- Google Fonts Open Sans -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
         <link href="style.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header class="header">
+			<!-- Background image from http://www.seeedstudio.com/depot/WiFi-Serial-Transceiver-Module-w-ESP8266-p-1994.html -->
 			<h1>experiments with the esp8266</h1>
 		</header>
 		<div class="actualstuff">
@@ -16,22 +19,55 @@
 				<aside class="nav" id="navigation">
 					<ul>
 						<li><a class="nav-a" href="index.html">Home</a></li>
+						<li><a class="nav-a" href="update.html#anim">Updating the esp8266</a></li>
 						<li><a class="nav-a" href="hardware.html#anim">Hardware Setup</a></li>
 						<li><a class="nav-a" href="software.html#anim">Software Setup</a></li>
-						<li><a class="nav-a" href="test.html#anim">Test it out!</a></li>
 						<li><a class="nav-a" href="about.html#anim">About Mason</a></li>
 					</ul>
 				</aside>
 				<section class="main" id="content">
 					<h2>Hardware</h2>
-					<p>I soldered some wires to my esp8266. It's not the prettiest, but it works. It's probably easier to use a breakout board, or something like that.</p>
-					<p>[photo here]</p>
-					<p>Then, I plugged everything into a breadboard. The end result is a mess of wires like the one shown in the photo.</p>
-					<p>[photo here]</p>
-					<p>After that, you should plug things in to the arduino. When plugging things into the arudino, keep in mind that <strong>the esp8266 uses 3.3V, but the arduino uses 5V</strong>. This means that you should plug in the power for the esp8266 into a 3.3V power supply. While you can use the one built into the arduino (like I did), it's not a very good idea as the esp8266 can pull A LOT of current sometimes. Also, the RX and TX pins will be 5V as well. This means you'll have to have a voltage divider on the [RX or TX] pins. Here's a schematic for it:</p>
-					<p>[photo here]</p>
-					<p>The RX pin goes in pin [pin] on the arduino, and the RX pin in pin [pin]. You can change these values in the program, but keep in mind that not all ports work.</p>
-					<p></p>
+					<p>Once you're done updating your esp8266, it's time to connect it to the arduino.</p>
+					<p>Plug everything into a breadboard. The end result is a mess of wires like the one shown in the photo.</p>
+					<p><img src="img/IMG_0101.JPG" alt="esp8266 with another snake of wires" /></p>
+					<p>After that, you should plug things in to the arduino. When plugging things into the arudino, keep in mind that <strong>the esp8266 uses 3.3V, but the arduino uses 5V</strong>. This means that you should plug in the power for the esp8266 into a 3.3V power supply. While you can use the one built into the arduino (like I did), it's not a very good idea as the esp8266 can pull A LOT of current sometimes. Also, the RX and TX pins will be 5V as well. This means you'll have to have a voltage divider on the RX pins. Here's a schematic for it:</p>
+					<!-- Image made using fritzing -->
+					<p><img src="img/schematic.jpg" alt="esp8266 schematic" /></p>
+					<p>Here's a schematic for the pins on the esp8266:</p>
+					<!-- Image from http://www.autonomii.com/2015/04/17/how-to-connect-to-the-esp8266-using-a-ftdi-adapter/ -->
+					<p><img src="http://i.imgur.com/dOXYTRH.png" alt="esp8266 schematic" /></p>
+					<p>For clarification, here's a table listing wiring:</p>
+					<table>
+						<thead>
+							<tr>
+								<td>Pin on ESP8266</td>
+								<td>Pin on Arduino</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="cell">
+								<td>VCC</td>
+								<td>3.3V</td>
+							</tr>
+							<tr class="cell">
+								<td>RX</td>
+								<td>Voltage divider, then to pin 11</td>
+							</tr>
+							<tr class="cell">
+								<td>CH_PD</td>
+								<td>3.3V</td>
+							</tr>
+							<tr class="cell">
+								<td>TX</td>
+								<td>pin 10</td>
+							</tr>
+							<tr class="cell">
+								<td>GND</td>
+								<td>GND</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>You should now be ready for the next step, <a href="software.html#anim">software</a>!</p>
 				</section>
 			</div>
 			<footer class="footer">

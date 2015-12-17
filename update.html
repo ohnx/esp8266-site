@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>esp8266 - updating firmware</title>
+        <meta charset='utf-8' />
+        <meta name="author" content="Mason" />
+        <meta name="description" content="esp8266 stuff" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="header">
+			<h1>experiments with the esp8266</h1>
+		</header>
+		<div class="actualstuff">
+			<div class="main-wrap">
+				<aside class="nav" id="navigation">
+					<ul>
+						<li><a class="nav-a" href="index.html">Home</a></li>
+						<li><a class="nav-a" href="update.html#anim">Updating the esp8266</a></li>
+						<li><a class="nav-a" href="hardware.html#anim">Hardware Setup</a></li>
+						<li><a class="nav-a" href="software.html#anim">Software Setup</a></li>
+						<li><a class="nav-a" href="about.html#anim">About Mason</a></li>
+					</ul>
+				</aside>
+				<section class="main" id="content">
+					<h2>Updating the esp8266 firmware</h2>
+					<p>While technically an optional step, it's quite difficult to get the esp8266 up and running smoothly without updating the firmware. This is a rather laborious and annoying process, especially if you don't have an FTDI. In any case, this is how I did it. </p>
+					<h3>Hardware setup for updating</h3>
+					<p>First, I had to connect wires to the esp8266. To do this, I soldered some wires to my esp8266. It's not the prettiest, but it works. It's probably easier to use a breakout board, or something like that.</p>
+					<p><img src="img/IMG_0099.JPG" alt="esp8266 with a snake of wires" /></p>
+					<p>After that, I had to connect it to a computer via USB. This meant splicing a USB cable to get to the RX and TX pins. The +5V and GND pins are plugged into the ardiuno's USB port power. This makes the ardiuno convert that 5v it gets into 3.3v. I powered the esp8266 from this.</p>
+					<p>[image of cable]</p>
+					<p>There are also some other pins that the esp8266 needs to be put into a flashing mode. HEre's a picture of the final wiring:</p>
+					<p>[image of final wiring]</p>
+					<p>For people who find it difficult to see how things are connected in just a picture, here's a table showing pins.</p>
+					<table>
+						<thead>
+							<tr>
+								<td>Pin on esp8266/USB cable</td>
+								<td>Pin on Arduino/USB cable</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="cell">
+								<td>esp8266 VCC</td>
+								<td>Arduino 3.3V</td>
+							</tr>
+							<tr class="cell">
+								<td>esp8266 RX</td>
+								<td>Voltage divider, then to [RX or TX] on the USB cable</td>
+							</tr>
+							<tr class="cell">
+								<td>Arduino USB Vin (5v)</td>
+								<td>USB cable 5V</td>
+							</tr>
+							<tr class="cell">
+								<td>esp8266 TX</td>
+								<td>USB cable [RX or TX]</td>
+							</tr>
+							<tr class="cell">
+								<td>esp8266 GND</td>
+								<td>Arduino GND</td>
+							</tr>
+							<tr class="cell">
+								<td>USB cable GND</td>
+								<td>Arduino GND</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>Software</h3>
+					<p>The software needed to update differs greatly from computer to computer. As a result, it's hard to cover all operating systems. Instead, here's some links to other sites explaining how to do this, in no particular order:</p>
+					<ul>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+					<p>You should now be ready for the next step, <a href="hardware.html#anim">hardware</a>!</p>
+				</section>
+			</div>
+			<footer class="footer">
+				<div>Made by <a class="credit" href="https://masonx.ca/">Mason</a></div>
+			</footer>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="navbar.js"></script>
+	</body>
+</html>
